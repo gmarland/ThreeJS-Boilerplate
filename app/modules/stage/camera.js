@@ -3,7 +3,7 @@ define(function() {
 		return {
 			_camera: null,
 
-			// Default camera settings, should probably be configurable on intialization
+			// Default camera settings
 			_cameraSettings: {
 	            fov: 75,
 				position: {

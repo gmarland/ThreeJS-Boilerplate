@@ -3,7 +3,7 @@ define(function() {
 		return {
 			_directionalLight: null,
 
-			 // directional lighting default setting, should be made configurable from the init
+			 // directional lighting default setting
 			_directionalLightSettings: {
                 color: 0xffffff,
                 intensity: 1.0,
@@ -15,8 +15,8 @@ define(function() {
             },
 
 			init: function() {
+				// Create a directional light and set its position
             	this._directionalLight  = new THREE.PointLight(this._directionalLightSettings.color, this._directionalLightSettings.intensity); 
-
                 this._directionalLight.position.set(this._directionalLightSettings.position.x, this._directionalLightSettings.position.y, this._directionalLightSettings.position.z);
 			},
 

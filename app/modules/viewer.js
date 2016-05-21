@@ -1,4 +1,4 @@
-define(["scene"], function(Scene) {
+define(["stage/scene"], function(Scene) {
 	return function() {
 		return {
 			_scene: null,

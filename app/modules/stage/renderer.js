@@ -3,7 +3,7 @@ define(function() {
 		return {
 			_container: null,
 
-			_skyboxColor: 0xff0000,
+			_skyboxColor: 0xf8f8f8,
 			_skyboxOpacity: 1,
 
 			init: function(container) {

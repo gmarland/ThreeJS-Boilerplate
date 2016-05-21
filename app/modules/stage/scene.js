@@ -1,4 +1,4 @@
-define(["camera", "lighting", "renderer"], function(Camera, Lighting, Renderer) {
+define(["stage/camera", "stage/lighting", "stage/renderer"], function(Camera, Lighting, Renderer) {
 	return function() {
 		return {
 			_container: null,
@@ -18,13 +18,13 @@ define(["camera", "lighting", "renderer"], function(Camera, Lighting, Renderer) 
 				// Create the three.js scene
 				this._scene = new THREE.Scene();
 
-	            // Add the camera to the scene
+	            // Create the camere and add it to the scene
 	            this._camera = new Camera();
 				this._camera.init(this._container);
 
 	            this._scene.add(this._camera.getCamera());
 
-	            // Add the lighting to the scene
+	            // Craete the lighting and add it to the scene
 	            this._lighting = new Lighting();
 				this._lighting.init();
 
@@ -51,7 +51,13 @@ define(["camera", "lighting", "renderer"], function(Camera, Lighting, Renderer) 
 		        };
 
 		        renderScene();
+		    },
+
+		    stopRendering: function() {
+		    	this._keepRenderingScene = false;
 		    }
 		};
+
 	};
 })
+
