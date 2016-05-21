@@ -41,6 +41,10 @@ define(["stage/camera", "stage/lighting", "stage/renderer"], function(Camera, Li
 				return this._scene;
 			},
 
+			addToScene: function(obj) {
+				this._scene.add(obj);
+			},
+
 			startRendering: function () {
 		        var that = this;
 

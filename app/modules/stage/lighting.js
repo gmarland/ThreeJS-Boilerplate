@@ -5,7 +5,7 @@ define(function() {
 
 			 // directional lighting default setting
 			_directionalLightSettings: {
-                color: 0xffffff,
+                color: new THREE.Color("#ffffff"),
                 intensity: 1.0,
                 position: {
                     x: 200,
